@@ -1,6 +1,7 @@
 FROM alpine:latest
-RUN apk-get update
-RUN  apk-get -y install git build-essential doxygen graphviz ninja-build libboost-all-dev libssl-dev libcpprest-dev
+RUN apk upgrade
+RUN apk add update
+RUN  apk add  git build-essential doxygen graphviz ninja-build libboost-all-dev libssl-dev libcpprest-dev
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.18.0-rc1/cmake-3.18.0-rc1.tar.gz && \
 tar -xzvf cmake-3.18.0-rc1.tar.gz && cd cmake-3.18.0-rc1 \
 ./bootstrap && make \
