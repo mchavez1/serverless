@@ -15,8 +15,6 @@ steps:
    - '--image'
    - 'gcr.io/$PROJECT_ID/core-engine:$COMMIT_SHA'
    - '--region'
-   - 'REGION
-
-'
+   - 'REGION'
  images:
  - 'gcr.io/$PROJECT_ID/core-engine:$COMMIT_SHA'
