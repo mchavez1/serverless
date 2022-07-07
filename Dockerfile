@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu:latest
 RUN set -ex && apk --no-cache add sudo
 RUN apk --no-cache add git
 RUN sudo apt-get update
