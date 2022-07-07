@@ -3,8 +3,7 @@ RUN apt-get update
 RUN apt-get -y install sudo wget git build-essential doxygen graphviz ninja-build libboost-all-dev libssl-dev libcpprest-dev
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.18.0-rc1/cmake-3.18.0-rc1.tar.gz && \
 tar -xzvf cmake-3.18.0-rc1.tar.gz && cd cmake-3.18.0-rc1 \
-./bootstrap && make \
-sudo make install \
+./bootstrap && make install \
 cd .. && rm -rf cmake-3.18.0-rc1 \
 source
 RUN git clone -b master https://github.com/pocoproject/poco.git \
