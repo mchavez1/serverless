@@ -1,11 +1,6 @@
-FROM debian:latest
+FROM kitware/cmake:ci-debian10-x86_64-2020-04-27
 RUN apt-get update
-RUN apt-get -y install sudo wget git build-essential doxygen graphviz ninja-build libboost-all-dev libssl-dev libcpprest-dev
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.18.0-rc1/cmake-3.18.0-rc1.tar.gz && \
-tar -xzvf cmake-3.18.0-rc1.tar.gz && cd cmake-3.18.0-rc1 \
-./bootstrap && make install \
-cd .. && rm -rf cmake-3.18.0-rc1 \
-source
+RUN apt-get -y install wget git build-essential doxygen graphviz ninja-build libboost-all-dev libssl-dev libcpprest-dev
 RUN git clone -b master https://github.com/pocoproject/poco.git \
 cd poco \
 mkdir cmake-build && cd cmake-build \
