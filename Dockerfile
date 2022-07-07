@@ -1,5 +1,4 @@
-FROM alpine:latest
-RUN apk add apt
+FROM debian:latest
 RUN apt-get update
 RUN apt-get -y install git build-essential doxygen graphviz ninja-build libboost-all-dev libssl-dev libcpprest-dev
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.18.0-rc1/cmake-3.18.0-rc1.tar.gz && \
