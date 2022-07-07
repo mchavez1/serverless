@@ -1,4 +1,5 @@
 FROM alpine:latest
+RUN set -ex && apk --no-cache add sudo
 RUN apk --no-cache add git
 RUN sudo apt-get update
 RUN sudo apt-get -y install build-essential doxygen graphviz ninja-build libboost-all-dev libssl-dev libcpprest-dev
