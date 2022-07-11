@@ -1,2 +1,5 @@
 FROM tiltedphoques/st-reborn-server:latest
-RUN -it -p 10578:10578/udp 
+EXPOSE map[$PORT/udp:{}]
+EXPOSE $PORT/udp
+WORKDIR /home/server
+ENTRYPOINT ["./SkyrimTogetherServer"]
